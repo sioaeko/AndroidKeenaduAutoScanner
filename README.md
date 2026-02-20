@@ -1,22 +1,47 @@
 # Android Keenadu Auto Scanner
 
-언어별 문서:
-- 한국어 가이드: `README.ko.md`
-- English guide: `README.en.md`
+Korean version: `README.ko.md`
 
-이 프로젝트는 ADB로 연결된 Android 태블릿에서 Keenadu IOC를 자동 점검합니다.
+This project automatically scans connected Android tablets (via ADB) for Keenadu IOC indicators.
 
-## 스크립트 버전
-- 한국어 버전: `monitor_keenadu_ko.py`
-- 영문 버전: `monitor_keenadu_en.py`
+## Requirements
+- Windows
+- Python 3.10+
+- `adb` available in PATH
 
-기존 상세 설명은 `README.ko.md`를 참고하세요.
+## Scripts
+- Korean script: `monitor_keenadu_ko.py`
+- English script: `monitor_keenadu_en.py`
 
-## 실행 예시
+## Run
+```powershell
+python monitor_keenadu_en.py
+```
+
+Recommended (reboot-based AK_CPP check):
+```powershell
+python monitor_keenadu_en.py --reboot-for-logcat --logcat-seconds 30
+```
+
+Verbose + full command logs:
+```powershell
+python monitor_keenadu_en.py --verbose --command-log-file logs\keenadu_cmdlog.json
+```
+
+## Check Status Meaning
+- `[EXECUTED][DETECTED]`: check ran and marker found
+- `[EXECUTED][NOT DETECTED]`: check ran and marker not found
+- `[NOT_EXECUTED]`: check could not run due to access/permission/command failure
+
+## Notes
+- IOC-based detection can have false negatives/false positives.
+- Negative results do not guarantee full safety.
+- Update `keenadu_iocs.json` when newer IOC data is published.
+
+## Sample Output
 
 ### KR Sample
 ![KR Sample](KR_sample1.png)
 
 ### EU Sample
 ![EU Sample](EU_sample1.png)
-
