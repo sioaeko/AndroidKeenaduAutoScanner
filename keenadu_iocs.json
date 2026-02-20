@@ -1,0 +1,92 @@
+{
+  "ioc_version": "2026-02-19",
+  "source": [
+    "https://www.kaspersky.com/about/press-releases/the-keenadu-malware-campaign-pre-installed-in-fake-android-devices",
+    "https://securelist.com/keenadu-campaign/116245/"
+  ],
+  "debug_log_tag": "AK_CPP",
+  "protected_broadcast_markers": [
+    "com.action.SystemOptimizeService",
+    "com.action.SystemProtectService"
+  ],
+  "badbox_binder_markers": [
+    "com.androidextlib.sloth.api.IPServiceM",
+    "com.androidextlib.sloth.api.IPermissionsM",
+    "sloth"
+  ],
+  "libandroid_runtime_string_markers": [
+    "AKServer",
+    "AKClient",
+    "com.action.SystemOptimizeService",
+    "com.action.SystemProtectService",
+    "vndx_10x",
+    "sloth"
+  ],
+  "infected_sample_packages": [
+    "com.aiworks.faceidservice",
+    "com.tct.contentcenter"
+  ],
+  "focus_component_packages": [
+    "com.aiworks.faceidservice",
+    "com.tct.contentcenter",
+    "com.pri.appcenter"
+  ],
+  "focus_permission_markers": [
+    "REQUEST_INSTALL_PACKAGES",
+    "SYSTEM_ALERT_WINDOW",
+    "PACKAGE_USAGE_STATS",
+    "RECEIVE_BOOT_COMPLETED",
+    "BIND_ACCESSIBILITY_SERVICE"
+  ],
+  "focus_service_markers": [
+    "RemoteService",
+    "SystemOptimizeService",
+    "SystemProtectService"
+  ],
+  "suspicious_build_markers": [
+    "test-keys",
+    "userdebug",
+    "eng"
+  ],
+  "known_good_fingerprints": [],
+  "known_good_system_apk_md5": {},
+  "suspicious_process_markers": [
+    "com.pri.appcenter.service.RemoteService",
+    "com.pri.appcenter"
+  ],
+  "suspicious_shell_command_markers": [
+    "pm install -r",
+    "input keyevent HOME",
+    "com.action.SystemOptimizeService"
+  ],
+  "suspicious_file_paths": [
+    "/data/dalvik-cache/arm/system@framework@vndx_10x.jar@classes.jar",
+    "/data/dalvik-cache/arm64/system@framework@vndx_10x.jar@classes.jar"
+  ],
+  "c2_endpoints": [
+    "hq.ublink.cc",
+    "s.namclk.cc",
+    "m.vidclk.cc",
+    "r.cmdx.site"
+  ],
+  "ioc_hashes": {
+    "libandroid_runtime_md5": [
+      "7f7a3c7daec7efd72f8bd6b85f90e56c",
+      "cdf57f2300d1f7acb4f3791989a52222",
+      "31ecfb9f9fa170ba44f786e7f9073866",
+      "1ef1f7e0f96f0d4bb7631f96f61f5f88",
+      "fbf7fa8fc10ed58c7917d4e6c0cc6f95"
+    ],
+    "keenadu_payload_md5": [
+      "a2eb4f1f734464f80d9f846636c19678",
+      "8d96519613f2de28120c11ecff45ed4f"
+    ],
+    "infected_system_app_md5": [
+      "a89f3b4f4f418f4ec2f3f24ce51fb484",
+      "5220aa32f51ea1ca97f29472adf42600"
+    ],
+    "vndx_loader_classes_dex_md5": [
+      "2f154a3df75f3f4bafcd8f53d4fab6f4"
+    ]
+  }
+}
