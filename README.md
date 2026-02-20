@@ -43,5 +43,5 @@ python monitor_keenadu_en.py --verbose --command-log-file logs\keenadu_cmdlog.js
 ### KR Sample
 ![KR Sample](KR_sample1.png)
 
-### EU Sample
-![EU Sample](EU_sample1.png)
+### US Sample
+![US Sample](EU_sample1.png)

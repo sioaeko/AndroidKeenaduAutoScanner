@@ -59,6 +59,6 @@ python monitor_keenadu.py --verbose --command-log-file logs\\keenadu_cmdlog.json
 ### KR 샘플
 ![KR Sample](KR_sample1.png)
 
-### EU 샘플
-![EU Sample](EU_sample1.png)
+### US 샘플
+![US Sample](EU_sample1.png)
 
